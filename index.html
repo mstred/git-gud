@@ -10,7 +10,8 @@
       .jumbo h1 { font-size: 90pt }
       .jumbo h2 { font-size: 60pt }
       .jumbo h3 { font-size: 30pt; }
-      .remark-code, .remark-inline-code { font-family: monospace; font-size: calc(100% * 2); }
+      .remark-code, .remark-inline-code { font-family: monospace; }
+      .remark-code { font-size: calc(100% * 2); }
     </style>
   </head>
   <body>
@@ -60,13 +61,19 @@ $ git config --local user.email <email>
 
 ## fazendo alterações
 
+--
+
 ```sh
 $ git add # adiciona conteúdo a ser rastreado
 ```
 
+--
+
 ```sh
 $ git reset # remover da área de rastreio
 ```
+
+--
 
 ```sh
 $ git commit # registra mudanças adicionadas 
@@ -117,6 +124,84 @@ $ git checkout -
 ```sh
 $ git branch -d branch-1
 # removendo o branch localmente
+```
+
+---
+
+## mesclando conteúdos
+
+--
+
+## `merge` vs `rebase` 
+
+---
+
+class: center, middle
+
+# remoto
+
+--
+
+### natureza distribuída do git
+
+--
+
+### é possível associar um repositório local a múltiplos remotos
+
+--
+
+### github, gitlab, bitbucket...
+
+---
+
+### adicionando remoto a um repo local
+
+```sh
+$ git remote add origin <url>
+```
+
+--
+
+### _clonando_ um repo a partir de um remoto
+
+```sh
+$ git clone <url>
+```
+
+---
+
+### comandos importantes
+
+```sh
+$ git fetch
+# faz download das informações do 
+# repositório remoto para o local
+```
+
+--
+
+```sh
+$ git push
+# faz upload de novos commits de um branch 
+# no repositório local para o remoto
+```
+
+---
+
+### comandos importantes
+
+```sh
+$ git pull
+# comando nativo do git que é um alias para
+# "git fetch" e "git merge", em sequência
+```
+
+--
+
+```sh
+$ git remote [add | set-url | show | remove]
+# comandos para gerenciar informações sobre
+# remotos (associados ao repositório local)
 ```
 
 ---
