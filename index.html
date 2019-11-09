@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>git</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js" integrity="sha256-0X/1LAQXsFEroxwOPcmqpxmSq3jj0c3+cw1yih2u+tY=" crossorigin="anonymous"></script>
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+      h1, h2, h3 { font-weight: normal; }
+      .jumbo h1 { font-size: 90pt }
+      .jumbo h2 { font-size: 60pt }
+      .jumbo h3 { font-size: 30pt; }
+      .remark-code, .remark-inline-code { font-family: monospace; font-size: calc(100% * 2); }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: jumbo
+layout: true
+
+---
+
+class: center, middle
+
+# git
+
+---
+
+class: center, middle
+
+# VCS
+
+## centralizado vs distribuído
+
+---
+
+class: center, middle
+
+# por que git?
+
+---
+
+## iniciando localmente
+
+```sh
+$ git init
+```
+
+--
+
+### importante!
+
+```sh
+$ git config --local user.name <nome>
+$ git config --local user.email <email>
+```
+
+---
+
+## fazendo alterações
+
+```sh
+$ git add # adiciona conteúdo a ser rastreado
+```
+
+```sh
+$ git reset # remover da área de rastreio
+```
+
+```sh
+$ git commit # registra mudanças adicionadas 
+```
+
+---
+
+background-image: url(https://git-scm.com/figures/18333fig0201-tn.png)
+background-size: 75%
+
+---
+
+## ignorando conteúdo
+
+```sh
+$ nano .gitignore
+# ou qualquer outro editor, claro 🙄
+```
+
+--
+
+### https://github.com/github/gitignore
+
+---
+
+## branching
+
+![branching](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Git_branches_fork.svg/800px-Git_branches_fork.svg.png)
+
+---
+
+### comandos importantes
+
+```sh
+$ git checkout -b branch-1 
+# criando branch 1
+```
+
+--
+
+```sh
+$ git checkout - 
+# voltando para o branch anterior
+```
+
+--
+
+```sh
+$ git branch -d branch-1
+# removendo o branch localmente
+```
+
+---
+
+    </textarea>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9'
+      });
+    </script>
+  </body>
+</html>
